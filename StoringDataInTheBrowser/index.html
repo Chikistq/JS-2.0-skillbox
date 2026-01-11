@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+  <title>Title</title>
+</head>
+<body>
+<form id="film-form" class="validate"><br />
+  <label for="title" class="just-validate-error-field" >Название:<br />
+  <input type="text" id="title" name="title" />
+  </label>
+  <label for="genre">Жанр:<br />
+    <input type="text" id="genre" name="genre" /><br />
+  </label>
+
+  <label for="releaseYear">Год:<br />
+    <input type="text" id="releaseYear" name="releaseYear" /><br />
+  </label>
+
+
+  <label for="isWatched">Успели посмотреть?<br />
+    <input type="checkbox" id="isWatched" name="isWatched" />
+  </label>
+
+
+  <button type="submit">Обновить</button>
+  <button id="cancelBtn" disabled>Отменить редактирование</button>
+</form>
+<select class="sortType">
+  <option value="releaseYear" checked>Год</option>
+  <option value="title">Наименование</option>
+</select>
+<button id="sortBtn">Сортировать</button>
+<table id="film-table">
+  <thead>
+  <tr>
+    <th>Название</th>
+    <th>Жанр</th>
+    <th>Год</th>
+    <th>Успели посмотреть?</th>
+    <th>Действие</th>
+  </tr>
+  </thead>
+  <tbody id="film-tbody">
+  <!-- Rows will be inserted here -->
+  </tbody>
+</table>
+
+<script src="index.js"></script>
+</body>
+</html>

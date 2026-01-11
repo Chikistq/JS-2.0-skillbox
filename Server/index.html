@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+  <title>Server</title>
+</head>
+<body>
+<form id="film-form">
+    <label for="title">Название:<br>
+    <input type="text" id="title" name="title"></label><br>
+    <label for="genre">Жанр:<br>
+    <input type="text" id="genre" name="genre"></label><br>
+    <label for="releaseYear">Год:<br>
+    <input type="text" id="releaseYear" name="releaseYear"></label><br>
+    <input type="checkbox" id="isWatched" name="isWatched">
+    <label for="isWatched">Успели посмотреть?</label><br>
+    <input type="submit" value="Submit">
+</form>
+<div class="sort-cont">
+    <form id="sort-form">
+        <label for="title">
+            <input type="search" id="sortTitle" class="sort-input" name="title" placeholder="Название"></label>
+        <label for="genre">
+            <input type="search" id="sortGenre" class="sort-input" name="genre" placeholder="Жанр"></label>
+        <label for="releaseYear">
+            <input type="search" id="sort-releaseYear" class="sort-input" name="releaseYear" placeholder="Год"></label>
+        <label for="sortWatch">
+            <select name="sort" id="sortWatch">
+                <option value="">Все</option>
+                <option value="true">Просмотрено</option>
+                <option value="false">Не просмотрено</option>
+            </select>
+        </label>
+    </form>
+    <button class="deletAll">Удалить все</button>
+</div>
+
+<table id="film-table">
+    <thead>
+    <tr>
+        <th>Название</th>
+        <th>Жанр</th>
+        <th>Год</th>
+        <th>Успели посмотреть?</th>
+        <th>Действие</th>
+    </tr>
+    </thead>
+    <tbody id="film-tbody">
+    <!-- Rows will be inserted here -->
+    </tbody>
+</table>
+<script src="script.js"></script>
+
+</body>
+</html>
