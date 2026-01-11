@@ -1,0 +1,39 @@
+.t1 {
+  width: 20%;
+  min-height: 100px;
+  background-color: #ededed;
+  display: block;
+  border-radius: 5px;
+  padding: 20px;
+  border: solid 1px #0c310d;
+}
+
+button {
+  padding: 10px;
+  margin: 5px;
+
+  border-radius: 10px;
+  color: #fff;
+}
+
+button:hover {
+  opacity: .9;
+}
+
+button:active {
+  opacity: .6;
+}
+
+.add {
+  background-color: #0cb20f;
+  border: solid 1px #0c310d;
+  transition: all .2s ease;
+}
+.filter {
+  background-color: #d67516;
+  border: solid 1px #724315;
+}
+
+ol li{
+  margin-bottom: 5px;
+}
