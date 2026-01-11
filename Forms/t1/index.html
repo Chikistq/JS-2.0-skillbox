@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Модуль 11</title>
+
+</head>
+<body>
+<div class="container">
+  <div class="task1">
+    <h1>Форма опроса</h1>
+    <form id= "form" class="qaForm form" enctype="multipart/form-data" action="#" method="post">
+      <label class="form__label" for="userName">
+        <span class="form__labelTitle">Введите имя:</span>
+        <input class="form__input" id="userName" data-validate-field="name" type="text" placeholder="Имя" name="userName" value="" required>
+      </label>
+      <label class="form__label" for="userEmail">
+        <span class="form__labelTitle">Введите e-mail:</span>
+        <input class="form__input" id="userEmail" data-validate-field="email" type="email" placeholder="E-mail" name="userEmail" required>
+      </label>
+
+      <label class="form__label radio">
+        <span class="form__labelTitle">Пол:</span>
+        <label><input class="form__input radio-btn" id="male" data-validate-field="#" type="radio" name="userGender"  value="Мужской">Мужской</label>
+        <label><input class="form__input radio-btn" id="female" data-validate-field="#" type="radio" name="userGender" value="Женский">Женский</label>
+      </label>
+
+      <label class="form__label" for="contact-range">
+        <span class="form__labelTitle">Оценка сервиса:</span>
+        <input class="form__input" id="contact-range" type="range" name="userRange" min="1" max="10" step="1">
+      </label>
+
+      <label class="form__label interest">
+        <span class="form__labelTitle">Интересы пользователя:</span>
+        <label><input class="form__input ch-btn" type="checkbox" name="userInterest" value="Спорт">Спорт</label>
+        <label><input class="form__input ch-btn" type="checkbox" name="userInterest" value="Музыка">Музыка</label>
+        <label><input class="form__input ch-btn" type="checkbox" name="userInterest" value="Путешествие">Путешествие</label>
+        <label><input class="form__input ch-btn" type="checkbox" name="userInterest" value="Кино">Кино</label>
+      </label>
+
+      <label class="form__label form__label_last" for="contact-comments">
+        <span class="form__labelTitle">Дополнительный комментарий:</span>
+        <textarea class="form__textarea" id="contact-comments" data-validate-field="comments" placeholder="Комментарий" name="userComments"></textarea>
+      </label>
+      <button class="form__btn btn btn_bg" type="submit">Отправить</button>
+    </form>
+
+    <div class="results"></div>
+  </div>
+
+
+<!--  задача 2-->
+  <div class="task2">
+    <h1>Калькулятор стоимости доставки</h1>
+    <form class="calcForm" id="calcForm" enctype="multipart/form-data" action="/" method="post" >
+      <label class="calcForm__input" for="prodName">
+        <span>Название товара:</span>
+        <input class="prodName input" id="prodName" type="text" name="prodName" placeholder="Товар" required>
+      </label>
+      <label class="calcForm__input" for="prodWeight">
+        <span>Вес товара (кг):</span>
+        <input class="prodWeight input" id="prodWeight" type="number" name="prodWeight" placeholder="Вес"  required>
+      </label>
+      <label class="calcForm__input" for="prodDist" required>
+        <span>Расстояние доставки (км):</span>
+        <input class="prodDist input" id="prodDist" type="number" name="prodDist" placeholder="Расстояние" required>
+      </label>
+      <button class="calcForm__btn btn" type="submit">Добавить товар</button>
+
+    </form>
+    <span class="warning visually-hidden">Введите корректное значение веса и расстояния</span>
+    <table class="product-table">
+      <thead>
+      <tr>
+        <th>Название товара</th>
+        <th>Вес (кг)</th>
+        <th>Расстояние (км)</th>
+        <th>Стоимость доставки</th>
+      </tr>
+      </thead>
+      <tbody>
+      <!-- Здесь будут добавляться товары -->
+      </tbody>
+    </table>
+  </div>
+
+<!--Задача 3-->
+  <div class="task3">
+    <h1>Дизайн&#xa0пластиковой карты</h1>
+    <form class="cardForm" id="cardForm" enctype="multipart/form-data" action="/" method="post" >
+      <label class="cardForm_input" for="prodName">
+        <span>Имя на карте:</span>
+        <input class="cardName input" id="cardName" type="text" name="cardName" placeholder="Имя" required>
+      </label>
+      <label class="cardForm_input" for="prodName">
+        <span>Цвет карты:</span>
+        <select class="cardColor" id="cardColor" type="select" name="cardColor" required>
+          <option value="#f54e4e" checked>Красный</option>
+          <option value="#50b0ff">Синий</option>
+          <option value="#72cd72">Зеленый</option>
+        </select>
+      </label>
+    </form>
+    <div class="userCard">
+      <span>Логотип</span>
+      <div class="cardNum">
+        <p>0000</p>
+        <p>0000</p>
+        <p>0000</p>
+        <p>0000</p>
+      </div>
+      <p class="card">Иван Иванов</p>
+    </div>
+
+  </div>
+</div>
+
+
+<script src="t1.js"></script>
+<script src="t2.js"></script>
+<script src="t3.js"></script>
+</body>
+</html>
