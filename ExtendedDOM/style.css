@@ -1,0 +1,61 @@
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0 0 10px;
+}
+
+button {
+  margin: 5px;
+}
+
+.task1 {
+  display: flex;
+  flex-direction: column;
+  max-width: 650px;
+  padding: 20px;
+  background-color: rgba(215, 215, 215, 0.99);
+}
+
+.task1, .task2, .task3 {
+  margin-bottom: 50px;
+}
+
+.carList {
+  list-style: none;
+  margin-bottom: 20px;
+  align-self: center;
+
+}
+
+.carList li {
+  display: inline-block;
+  width: 200px;
+  margin: 0 5px 0;
+}
+
+img {
+  height: auto;
+  object-fit: cover;
+  max-width: 100%;
+  height: 150px;
+}
+
+.fullImg {
+  width: 600px;
+  min-height: 300px;
+  align-self: center;
+}
+
+
+.elemList, .priceList {
+  margin: 10px 10px;
+  padding: 10px;
+}
+
+.elemList li, .priceList li {
+  margin-bottom: 5px;
+}
